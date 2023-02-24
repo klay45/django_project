@@ -13,9 +13,9 @@ import os
 from pathlib import Path
 
 #heroku web hosting
-import django_heroku
-import dj_database_url
-from decouple import config
+#import django_heroku
+#import dj_database_url
+#from decouple import config
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -31,7 +31,7 @@ SECRET_KEY = 'django-insecure-g0o_lml0-c_5-za%w*wdmv45x&wqgw0n_tfdu4f0gkf8jq)*!!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','localhost','192.168.11.107','192.168.20.137']
+ALLOWED_HOSTS = ['127.0.0.1','localhost','192.168.11.117','192.168.20.137']
 #ALLOWED_HOSTS = []
 
 
@@ -57,7 +57,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware'
+    
 ]
 
 ROOT_URLCONF = 'epccid.urls'
@@ -139,12 +139,11 @@ STATICFILES_DIRS=[
 	os.path.join(BASE_DIR, 'static'),
 ]
 #STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 IMPORT_EXPORT_USE_TRANSACTIONS = True
 
 
-django_heroku.settings(locals())
+#django_heroku.settings(locals())
 #SESSION_COOKIE_SECURE = True
 #CSRF_COOKIE_SECURE = True
 # Default primary key field type
